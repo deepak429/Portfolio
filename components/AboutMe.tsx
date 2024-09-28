@@ -41,7 +41,7 @@ function AboutMe() {
               }
             >
               <MagicButton 
-            title='Show my work'
+            title='Resume'
             icon={<FaCloudDownloadAlt size={20} />}
             position="right "
      
