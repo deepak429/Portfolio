@@ -32,6 +32,8 @@ export default function Hero() {
             title='Show my work'
             icon={<FaLocationArrow/>}
             position="right"
+            
+          
      
           /></a>
         

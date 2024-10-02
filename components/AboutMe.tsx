@@ -5,11 +5,13 @@ import React from "react";
 import MagicButton from "./MagicButton";
 import Link from "next/link";
 import { socialMedia } from "@/data/data";
+import Image from "next/image";
+import { FaLocationArrow } from "react-icons/fa6";
 // import { FaLocationArrow } from "react-icons/fa6";
 
 function AboutMe() {
   return (
-    <div className=" flex flex-col items-center lg:flex-row pt-10  xl:pt-0 gap-x-10  rounded-2xl border border-b-0  border-slate-800 p-5 md:px-16 md:w-[80vw] ">
+    <div className=" flex flex-col items-center lg:flex-row pt-10  xl:pt-0 gap-x-10  rounded-2xl border border-b-0  border-slate-800 px-0 lg:px-16  md:w-[80vw] ">
       <div className="flex flex-col gap-y-6  w-5/6 justify-center items-center  ">
         <h1 className="font-semibold text-lg">
           {""}
@@ -33,32 +35,35 @@ function AboutMe() {
           and I’m always exploring new tools and frameworks to expand my
           knowledge and expertise.
         </div>
-        <div className="flex flex-row items-center gap-x-10  ">
+        
+        <div className="flex items-center justify-between  w-full  gap-x-2  h-20">
           <div>
             <Link
               href={
                 "https://drive.google.com/file/d/1PhYOK3OFnBkpEbaaVsnPPFLeTGGtGucj/view"
               }
             >
-              <MagicButton 
-            title='Resume'
-            icon={<FaCloudDownloadAlt size={20} />}
-            position="right "
+             
+            <MagicButton 
+            title='Resume Download'
+            icon={<FaCloudDownloadAlt size={25}/>}
+            position="right"
+            
+          
      
           />
             </Link>
           </div>
-          <div>
-          </div>
+          
 
-          <div className="flex items-center md:gap-3 gap-6">
+          <div className="flex items-center md:gap-3 gap-">
             {socialMedia.map(({ id, img, url }) => (
               <div
                 key={id}
-                className="w-10 h-10 cursor-pointer border border-purple flex justify-center items-center  backdrop-blur-lg saturate-180 bg-opacity-75 bg-transparent rounded-lg"
+                className="w-10 h-10 cursor-pointer border border-purple flex justify-center items-center  backdrop-blur-lg saturate-180 bg-opacity-75 bg-transparent rounded-lg hover:mb-6 ease-in-out duration-200 "
               >
                 <Link href={url}>
-                  <img src={img} sizes="20"/>
+                  <Image src={img} alt="" height={20} width={20} className="size-30"/>
                 </Link>
               </div>
             ))}

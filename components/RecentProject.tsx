@@ -28,12 +28,12 @@ function RecentProject() {
           <span className="text-purple">recent project</span>
         </h1>
         <div className="flex flex-wrap item-center justify-center p-4 gap-x-24 ">
-          {displayedData.map(({ id, title, des, img, iconLists, link }) => (
+          {displayedData.map(({ id, title, des, img, iconLists, link,link_tag }) => (
             <div
               key={id}
               className=" sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
             >
-              <PinContainer title={link} href={link}>
+              <PinContainer title={link_tag} href={link}>
                 <div className="relative flex item-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d">
                     <img src="/bg.png" alt="" />
@@ -44,11 +44,11 @@ function RecentProject() {
                     className="z-10 absolute bottom-0"
                   />
                 </div>
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 mb-1">
                   {title}
                 </h1>
 
-                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+                <p className="lg:text-lg lg:font-normal font-light text-sm line-clamp-2">
                   {des}
                 </p>
 
@@ -77,16 +77,6 @@ function RecentProject() {
               </PinContainer>
             </div>
           ))}
-
-          {visibleCount < projects.length && (
-            <MagicButton
-              title="Load More "
-              icon={<FaCloudDownloadAlt size={20} />}
-              position="right "
-              otherClasses="rounded-full text-base border-none"
-              handleClick={loadMore}
-            />
-          )}
         </div>
       </div>
     </TracingBeam>
