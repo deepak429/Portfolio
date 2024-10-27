@@ -35,13 +35,13 @@ function RecentProject() {
             >
               <PinContainer title={link_tag} href={link}>
                 <div className="relative flex item-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                  <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d">
-                    <img src="/bg.png" alt="" />
-                  </div>
+                  {/* <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d">
+                    {/* <img src="/bg.png" alt="" /> */}
+                  {/* </div> */} 
                   <img
                     src={img}
                     alt={title}
-                    className="z-10 absolute bottom-0"
+                    className="z-10 absolute bottom-0 object-cover   "
                   />
                 </div>
                 <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 mb-1">
